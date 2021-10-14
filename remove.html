@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Content & Elements</title>
+
+    <style>
+        .container {
+            padding: 10px;
+            background: rgb(146, 214, 177);
+            border: 1px solid;
+        }
+    </style>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button.btn1").click(function(){
+                $(".p1").remove();
+            });
+            $("button.btn2").click(function(){
+                $(".container").empty();
+            });
+            $(".btn3").click(function(){
+                $("p").unwrap();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Remove Content/Elements</h1>
+        <div class="p1">
+            <p><strong>Paragraf 1:</strong> Klik tombol <strong>Remove Element</strong> untuk menghilangkan kalimat ini.</p>
+            <p><strong>Note:</strong> remove() akan menghapus konten dan juga selector pada inspect element.</p>
+        </div>
+
+        <div class="p2">
+            <p><strong>Paragraf 2:</strong> Klik tombol <strong>Empty Container</strong> untuk menghilangkan isi dari container.</p>
+            <p><strong>Note:</strong> empty() hanya akan menghapus konten dan menyisakan selector pada inspect element.</p>
+        </div>
+    </div>
+    <br>
+    <button class="btn1" type="button">Remove Element</button>  
+    <button class="btn2" type="button">Empty Container</button>
+    <button class="btn3" type="button">Remove Paragraph's Parent</button>
+
+</body>
+
+</html>
